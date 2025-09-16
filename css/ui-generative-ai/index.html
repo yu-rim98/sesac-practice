@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Song+Myung&family=Stylish&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Movie Review</title>
+  </head>
+  <body>
+    <header>
+      <nav class="flex justify-between items-center px-30 py-8">
+        <div class="flex gap-x-8">
+          <h1 class="pacifico-regular text-3xl text-purple-700">
+            <a href="#">MovieReview</a>
+          </h1>
+          <ul class="flex gap-x-8 pt-3">
+            <li><a href="#">리뷰</a></li>
+            <li><a href="#">평점</a></li>
+            <li><a href="#">랭킹</a></li>
+            <li><a href="#">커뮤니티</a></li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-x-4 pt-3">
+          <div class="relative">
+            <div class="absolute pl-2 pt-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              class="border-1 border-gray-300 rounded-md pl-13 py-2"
+              type="text"
+              placeholder="영화 검색..."
+            />
+          </div>
+
+          <button
+            class="px-4 py-2 text-white bg-purple-500 border-1 border-purple-500 rounded-md"
+          >
+            리뷰 작성
+          </button>
+        </div>
+      </nav>
+      <div
+        class="relative h-160 w-full bg-[url('./aa.jpg')] bg-cover bg-center"
+      >
+        <div
+          class="relative h-full flex flex-col items-center justify-center text-center"
+        >
+          <p class="text-7xl text-white mb-5">
+            영화의 모든 것을 <span class="text-yellow-400">리뷰</span>로 나누다
+          </p>
+          <p class="text-2xl text-white">
+            전문 리뷰어들의 깊이 있는 분석과 일반 관객들의 솔직한 후기를 한
+            곳에서 만나보세요
+          </p>
+          <div class="mt-8">
+            <button
+              class="px-10 py-3 text-white bg-yellow-500 border-1 border-yellow-500 rounded-md mr-7"
+            >
+              인기 리뷰 보기
+            </button>
+            <button
+              class="px-10 py-3 text-white border-1 border-white-500 rounded-md"
+            >
+              리뷰 작성하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <ul class="flex gap-x-7 mt-8 px-30 pb-8 border-b-2 border-gray-100">
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">전체</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">액션</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">드라마</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">코미디</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">스릴러</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">공포</a>
+        </li>
+        <li
+          class="px-4 py-2 text-black bg-gray-300 border-gray-300 rounded-3xl font-medium"
+        >
+          <a href="#">SF</a>
+        </li>
+      </ul>
+
+      <div class="bg-gray-50">
+        <div class="grid grid-cols-3 gap-8 p-8">
+          <div class="col-span-2 flex flex-col gap-y-8">
+            <div class="flex justify-between px-20">
+              <h1 class="text-3xl font-bold">주요 리뷰</h1>
+              <a href="#" class="inline-flex text-purple-700"
+                ><span class="mt-1 font-semibold">모두 보기</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="size-5 mt-1.5 ml-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="flex gap-8">
+              <div class="w-80 rounded-xl bg-white shadow-md ml-20">
+                <div class="relative">
+                  <img
+                    class="h-full w-full rounded-t-xl object-cover"
+                    src="https://readdy.ai/api/search-image?query=Epic%20sci-fi%20movie%20poster%20featuring%20futuristic%20desert%20landscape%20with%20massive%20spaceships%20hovering%20over%20sand%20dunes%2C%20dramatic%20lighting%20with%20orange%20and%20blue%20tones%2C%20cinematic%20composition%2C%20professional%20movie%20poster%20style&width=400&height=600&seq=dune-poster&orientation=portrait"
+                    alt="듄: 파트 2 포스터"
+                  />
+
+                  <div
+                    class="absolute top-3 left-3 rounded-md bg-black bg-opacity-60 px-2 py-1 text-sm font-semibold text-white"
+                  >
+                    SF
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 flex items-center gap-x-1 rounded-md bg-yellow-400 px-2 py-1 text-sm font-bold text-black"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="size-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.868 2.884c.321-.772 1.415-.772 1.736 0l1.983 4.795a.75.75 0 0 0 .564.41l5.292.769c.84.122 1.177 1.142.564 1.732l-3.829 3.732a.75.75 0 0 0-.216.664l.904 5.27c.144.836-.732 1.48-1.483 1.093l-4.726-2.485a.75.75 0 0 0-.702 0l-4.726 2.485c-.751.387-1.627-.257-1.483-1.093l.904-5.27a.75.75 0 0 0-.216-.664L.29 10.589c-.613-.59-.276-1.61.564-1.732l5.292-.769a.75.75 0 0 0 .564-.41l1.983-4.795Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+
+                    <span>9.2</span>
+                  </div>
+                </div>
+                <div class="flex flex-col p-4">
+                  <h3 class="text-xl font-bold">듄: 파트 2</h3>
+
+                  <p class="mt-2 truncate text-gray-600">
+                    드니 빌뇌브의 비전이 완벽하게 구현된 대작. 시각적 스펙터클과
+                    깊이 있는 스...
+                  </p>
+
+                  <div class="mt-4 flex justify-between text-sm text-gray-400">
+                    <span>김영화</span>
+
+                    <span>2024-03-15</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-80 rounded-xl bg-white shadow-md">
+                <div class="relative">
+                  <img
+                    class="h-full w-full rounded-t-xl object-cover"
+                    src="https://readdy.ai/api/search-image?query=Dramatic%20biographical%20movie%20poster%20featuring%20scientist%20in%20laboratory%20setting%20with%20atomic%20symbols%20and%20equations%20in%20background%2C%20dark%20moody%20lighting%2C%20professional%20cinematography%20style%2C%20historical%20drama%20atmosphere&width=400&height=600&seq=oppenheimer-poster&orientation=portrait"
+                    alt="듄: 파트 2 포스터"
+                  />
+
+                  <div
+                    class="absolute top-3 left-3 rounded-md bg-black bg-opacity-60 px-2 py-1 text-sm font-semibold text-white"
+                  >
+                    SF
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 flex items-center gap-x-1 rounded-md bg-yellow-400 px-2 py-1 text-sm font-bold text-black"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="size-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.868 2.884c.321-.772 1.415-.772 1.736 0l1.983 4.795a.75.75 0 0 0 .564.41l5.292.769c.84.122 1.177 1.142.564 1.732l-3.829 3.732a.75.75 0 0 0-.216.664l.904 5.27c.144.836-.732 1.48-1.483 1.093l-4.726-2.485a.75.75 0 0 0-.702 0l-4.726 2.485c-.751.387-1.627-.257-1.483-1.093l.904-5.27a.75.75 0 0 0-.216-.664L.29 10.589c-.613-.59-.276-1.61.564-1.732l5.292-.769a.75.75 0 0 0 .564-.41l1.983-4.795Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+
+                    <span>9.2</span>
+                  </div>
+                </div>
+                <div class="flex flex-col p-4">
+                  <h3 class="text-xl font-bold">오펜하이머</h3>
+
+                  <p class="mt-2 truncate text-gray-600">
+                    크리스토퍼 놀란의 역작. 역사적 인물의 내면을 탁월한 연출과
+                    연기로 그려낸 ...
+                  </p>
+
+                  <div class="mt-4 flex justify-between text-sm text-gray-400">
+                    <span>박시네마</span>
+
+                    <span>2024-03-12</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-80 rounded-xl bg-white shadow-md">
+                <div class="relative">
+                  <img
+                    class="h-full w-full rounded-t-xl object-cover"
+                    src="https://readdy.ai/api/search-image?query=Colorful%20superhero%20movie%20poster%20featuring%20space%20guardians%20team%20in%20cosmic%20setting%20with%20bright%20nebula%20background%2C%20dynamic%20action%20poses%2C%20comic%20book%20style%20with%20vibrant%20colors%20and%20space%20elements&width=400&height=600&seq=guardians-poster&orientation=portrait"
+                    alt="듄: 파트 2 포스터"
+                  />
+
+                  <div
+                    class="absolute top-3 left-3 rounded-md bg-black bg-opacity-60 px-2 py-1 text-sm font-semibold text-white"
+                  >
+                    SF
+                  </div>
+
+                  <div
+                    class="absolute top-3 right-3 flex items-center gap-x-1 rounded-md bg-yellow-400 px-2 py-1 text-sm font-bold text-black"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="size-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.868 2.884c.321-.772 1.415-.772 1.736 0l1.983 4.795a.75.75 0 0 0 .564.41l5.292.769c.84.122 1.177 1.142.564 1.732l-3.829 3.732a.75.75 0 0 0-.216.664l.904 5.27c.144.836-.732 1.48-1.483 1.093l-4.726-2.485a.75.75 0 0 0-.702 0l-4.726 2.485c-.751.387-1.627-.257-1.483-1.093l.904-5.27a.75.75 0 0 0-.216-.664L.29 10.589c-.613-.59-.276-1.61.564-1.732l5.292-.769a.75.75 0 0 0 .564-.41l1.983-4.795Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+
+                    <span>9.2</span>
+                  </div>
+                </div>
+                <div class="flex flex-col p-4">
+                  <h3 class="text-xl font-bold">가디언즈 오브 갤럭시 3</h3>
+
+                  <p class="mt-2 truncate text-gray-600">
+                    완벽한 마무리를 보여준 3부작의 피날레. 감동과 액션이
+                    완벽하게 균형을 이룬 ...
+                  </p>
+
+                  <div class="mt-4 flex justify-between text-sm text-gray-400">
+                    <span>이무비</span>
+
+                    <span>2024-03-10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="rounded-lg bg-white pl-9 py-9 pr-50 mt-12 border-gray-100 shadow-md"
+            >
+              <h1 class="text-2xl font-bold">인기 리뷰어</h1>
+              <ol class="mt-3">
+                <li class="flex flex-col">
+                  <div class="flex items-center">
+                    <p
+                      class="bg-purple-200 border-purple-200 rounded-full p-3 mt-3"
+                    >
+                      &#127916;
+                    </p>
+                    <p class="ml-3 font-semibold">김영화</p>
+                    <span
+                      class="ml-2 rounded-full bg-yellow-100 text-sm px-3 py-1 text-yellow-900 text-lg font-medium"
+                      >#1</span
+                    >
+                  </div>
+                  <div class="ml-14">
+                    <span class="text-gray-500"
+                      >리뷰 247개 · 팔로워 15,420명</span
+                    >
+                  </div>
+                </li>
+                <li class="pt-5 flex flex-col">
+                  <div class="flex items-center">
+                    <p class="bg-purple-200 border-purple-200 rounded-full p-3">
+                      &#127917;
+                    </p>
+                    <p class="ml-3 font-semibold">박시네마</p>
+                    <span
+                      class="ml-2 rounded-full bg-yellow-100 text-sm px-3 py-1 text-yellow-900 text-lg font-medium"
+                      >#2</span
+                    >
+                  </div>
+                  <div class="ml-14">
+                    <span class="text-gray-500"
+                      >리뷰 189개 · 팔로워 12,350명</span
+                    >
+                  </div>
+                </li>
+                <li class="pt-5 flex flex-col">
+                  <div class="flex items-center">
+                    <p class="bg-purple-200 border-purple-200 rounded-full p-3">
+                      &#127914;
+                    </p>
+                    <p class="ml-3 font-semibold">이무비</p>
+                    <span
+                      class="ml-2 rounded-full bg-yellow-100 text-sm px-3 py-1 text-yellow-900 text-lg font-medium"
+                      >#3</span
+                    >
+                  </div>
+                  <div class="ml-14">
+                    <span class="text-gray-500"
+                      >리뷰 156개 · 팔로워 9,870명</span
+                    >
+                  </div>
+                </li>
+
+                <li class="pt-5 flex flex-col">
+                  <div class="flex items-center">
+                    <p class="bg-purple-200 border-purple-200 rounded-full p-3">
+                      &#127769;
+                    </p>
+                    <p class="ml-3 font-semibold">최액션</p>
+                    <span
+                      class="ml-2 rounded-full bg-yellow-100 text-sm px-3 py-1 text-yellow-900 text-lg font-medium"
+                      >#4</span
+                    >
+                  </div>
+                  <div class="ml-14">
+                    <span class="text-gray-500"
+                      >리뷰 143개 · 팔로워 8,920명</span
+                    >
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
