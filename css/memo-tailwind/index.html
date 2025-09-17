@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>메모 페이지</title>
+  </head>
+  <body class="bg-gray-100">
+    <!-- 상단(Header) -->
+    <!-- 페이지의 제목과 주 메뉴(내비게이션)가 위치하는 영역 -->
+    <header>
+      <h2
+        class="px-5 py-5 bg-yellow-400 text-center text-white text-3xl font-bold shadow-md"
+      >
+        나만의 메모장
+      </h2>
+    </header>
+
+    <!-- 본문(Main) -->
+    <!-- 페이지의 주요 내용이 위치하는 영역 -->
+    <main class="flex justify-center items-center flex-col">
+      <div class="mt-7 ml-3">
+        <div class="bg-white w-64 rounded-lg">
+          <h3 class="py-3 border-b-1">장보기 목록</h3>
+          <p>계란, 닭가슴살, 대파, 양파</p>
+          <p>2099-12-31</p>
+        </div>
+
+        <div class="bg-white w-64 rounded-lg">
+          <h3>주말 계획</h3>
+          <p>토요일 오전 휴식, 일요일 오전 러닝</p>
+          <p>2099-12-31</p>
+        </div>
+      </div>
+    </main>
+    <hr />
+
+    <!-- 하단(Footer) -->
+    <!-- 페이지의 추가 정보가 위치하는 영역 -->
+    <footer>간단한 메모 웹 페이지</footer>
+  </body>
+</html>
