@@ -135,6 +135,11 @@ for (let i = 0; i < numbers.length; i++) {
   newNumbers[i] = numbers[i] * 2;
 }
 
+// for...of 반복문
+// for (value of numbers) {
+//   newNumbers.push(value * 2);
+// }
+
 console.log(newNumbers);
 
 /* 출력 결과
@@ -155,6 +160,12 @@ for (let i = 0; i < numbers2.length; i++) {
   }
 }
 
+// for...of 반복문
+// for (value of numbers2) {
+//   if (value % 2 === 0) {
+//     newNumbers2.push(value);
+//   }
+// }
 console.log(newNumbers2);
 
 /* 출력 결과
