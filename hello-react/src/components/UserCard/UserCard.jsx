@@ -1,11 +1,4 @@
-export default function UserCard() {
-  const userData = {
-    name: "김철수",
-    age: 28,
-    email: "kimcs@example.com",
-    profileImage: "https://picsum.photos/id/237/200/300",
-  };
-
+export default function UserCard({ userData, onClick }) {
   return (
     <>
       <div className="w-80 bg-white rounded-xl shadow-md overflow-hidden">
@@ -15,6 +8,9 @@ export default function UserCard() {
               className="w-24 h-24 rounded-full object-cover"
               src={userData.profileImage}
               alt="사용자 프로필"
+              onClick={() => {
+                onClick(userData.name, userData.age, userData.email);
+              }}
             />
           </div>
           <div className="text-center">
