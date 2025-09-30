@@ -1,11 +1,9 @@
-import Main from "./components/Main";
-import ProductContainer from "./components/ProductCard/ProductContainer";
+import Carts from "./Carts/Carts";
 
 function App() {
   return (
     <>
-      <ProductContainer />
-      <Main />
+      <Carts />
     </>
   );
 }
