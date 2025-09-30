@@ -1,9 +1,9 @@
-import ObjectState from "./components/State/ObjectState";
+import ArrayState from "./components/State/ArrayState";
 
 function App() {
   return (
     <>
-      <ObjectState />
+      <ArrayState />
     </>
   );
 }
