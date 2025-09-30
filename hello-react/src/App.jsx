@@ -1,10 +1,10 @@
 import Carts from "./Carts/Carts";
-import StringState from "./components/State/StringState";
+import NumberState from "./components/State/NumberState";
 
 function App() {
   return (
     <>
-      <StringState />
+      <NumberState />
     </>
   );
 }
