@@ -61,10 +61,9 @@ const Carts = () => {
     <div className="max-w-7xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">상품 목록</h1>
       <div className="flex flex-wrap gap-4">
-        <Product product={carts.products[0]} />
-        <Product product={carts.products[1]} />
-        <Product product={carts.products[2]} />
-        <Product product={carts.products[3]} />
+        {carts.products.map((product) => (
+          <Product product={product} />
+        ))}
       </div>
     </div>
   );
