@@ -1,10 +1,9 @@
-import Carts from "./Carts/Carts";
-import NumberState from "./components/State/NumberState";
+import ObjectState from "./components/State/ObjectState";
 
 function App() {
   return (
     <>
-      <NumberState />
+      <ObjectState />
     </>
   );
 }
