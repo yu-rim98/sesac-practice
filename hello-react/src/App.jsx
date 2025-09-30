@@ -1,9 +1,9 @@
-import ArrayState from "./components/State/ArrayState";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
-      <ArrayState />
+      <Main />
     </>
   );
 }

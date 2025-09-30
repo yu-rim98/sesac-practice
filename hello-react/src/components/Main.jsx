@@ -1,6 +1,5 @@
-import UserCard from "./UserCard/UserCard";
-import UserCardContainer from "./UserCard/UserCardContainer";
+import Counter from "./Counter/Counter";
 
 export default function Main() {
-  return <UserCardContainer />;
+  return <Counter />;
 }
