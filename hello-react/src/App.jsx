@@ -1,9 +1,9 @@
-import Main from "./components/Main";
+import Form from "./components/Signup/Form";
 
 function App() {
   return (
     <>
-      <Main />
+      <Form />
     </>
   );
 }
