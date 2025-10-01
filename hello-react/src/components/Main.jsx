@@ -1,6 +1,5 @@
-import Calculator from "./Calculator/Calculator";
-import QuoteContainer from "./DummyJSON/QuoteContainer";
+import RecipeContainer from "./Recipe/RecipeContainer";
 
 export default function Main() {
-  return <QuoteContainer />;
+  return <RecipeContainer />;
 }
