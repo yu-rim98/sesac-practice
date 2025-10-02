@@ -1,9 +1,9 @@
-import Main from "./components/Main";
+import Container from "./components/PostLimitSkip/Container";
 
 function App() {
   return (
     <>
-      <Main />
+      <Container />
     </>
   );
 }
