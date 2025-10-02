@@ -30,7 +30,9 @@ const Container = () => {
         setSkip((preState) => preState - preState);
         break;
       case "prev":
-        setSkip((preState) => (preState < 1 ? preState : preState - 5));
+        skip < 1
+          ? alert("이전 목록이 없습니다.")
+          : setSkip((preState) => preState - 5);
         break;
       case "next":
         setSkip((preState) => preState + 5);

@@ -1,4 +1,4 @@
-import Container from "./components/PostComments/Container";
+import Container from "./components/PostLimitSkip/Container";
 
 function App() {
   return (
