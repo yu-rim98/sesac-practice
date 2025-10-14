@@ -5,6 +5,8 @@ import Carts from "../pages/DummyPages/Carts";
 import Posts from "../pages/DummyPages/Posts";
 import RootLayout from "../layouts/RootLayout";
 import DummyLayout from "../layouts/DummyLayout";
+import PostDetail from "../pages/DummyPages/PostDetail";
+import ProductDetail from "../pages/DummyPages/ProductDetail";
 
 const router = createBrowserRouter([
   {
@@ -26,12 +28,20 @@ const router = createBrowserRouter([
         Component: Products,
       },
       {
+        path: "products/:productId",
+        Component: ProductDetail,
+      },
+      {
         path: "carts",
         Component: Carts,
       },
       {
         path: "posts",
         Component: Posts,
+      },
+      {
+        path: "posts/:postId",
+        Component: PostDetail,
       },
     ],
   },
