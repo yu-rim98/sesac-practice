@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PostsList from "../../components/PostsList";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import PATHS from "../../constants/Paths";
 
 const Posts = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Posts = () => {
     <div>
       <h2>게시글 리스트</h2>
       {posts.map((post) => (
-        <Link key={post.id} to={`/dummy/posts/${post.id}`}>
+        <Link key={post.id} to={PATHS.DUMMY.getPostDetailPath(post.id)}>
           <PostsList post={post} />
         </Link>
       ))}

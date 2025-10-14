@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import PATHS from "../constants/Paths";
 
 const DummyLayout = () => {
   const navLinkClass = ({ isActive }) =>
@@ -11,22 +12,22 @@ const DummyLayout = () => {
     <div>
       <ul className="flex">
         <li className="m-2">
-          <NavLink to="/" className={navLinkClass}>
+          <NavLink to={PATHS.ROOT.INDEX} className={navLinkClass}>
             홈
           </NavLink>
         </li>
         <li className="m-2">
-          <NavLink to="/dummy/products" className={navLinkClass}>
+          <NavLink to={PATHS.DUMMY.PRODUCTS} className={navLinkClass}>
             상품 목록
           </NavLink>
         </li>
         <li className="m-2">
-          <NavLink to="/dummy/carts" className={navLinkClass}>
+          <NavLink to={PATHS.DUMMY.CARTS} className={navLinkClass}>
             장바구니 목록
           </NavLink>
         </li>
         <li className="m-2">
-          <NavLink to="/dummy/posts" className={navLinkClass}>
+          <NavLink to={PATHS.DUMMY.POSTS} className={navLinkClass}>
             게시글 목록
           </NavLink>
         </li>

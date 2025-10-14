@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductsList from "../../components/ProductsList";
 import axios from "axios";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import PATHS from "../../constants/Paths";
 
 // sortBy 와 order 쿼리 파라미터로 정렬을 구현한다
 // Products 컴포넌트에 아래와 같은 정렬 버튼을 추가한다
@@ -82,7 +83,10 @@ const Products = () => {
       <button onClick={clickPrice}>가격 {priceButtonText}</button>
 
       {products.map((product) => (
-        <Link key={product.id} to={`/dummy/products/${product.id}`}>
+        <Link
+          key={product.id}
+          to={PATHS.DUMMY.getProductDetailPath(product.id)}
+        >
           <ProductsList product={product} />
         </Link>
       ))}
