@@ -1,6 +1,6 @@
 package practice2;
 
-public class practice1 {
+public class Practice1 {
 
     public static void main(String[] args) {
 //        문제 1: 구구단

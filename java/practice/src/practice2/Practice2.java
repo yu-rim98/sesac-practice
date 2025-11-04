@@ -1,6 +1,6 @@
 package practice2;
 
-public class practice2 {
+public class Practice2 {
 
     public static void main(String[] args) {
 //        문제 2: 별 찍기 패턴 1
