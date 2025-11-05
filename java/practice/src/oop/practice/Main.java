@@ -23,6 +23,14 @@ public class Main {
         int balance = bankAccount.getBalance();
         System.out.println(balance);
 
-
+        Counter counter = new Counter();
+        counter.increment();
+        counter.decrement();
+        counter.increment();
+        System.out.println(counter.getCount());
+        counter.increment();
+        System.out.println(counter.getCount());
+        counter.reset();
+        System.out.println(counter.getCount());
     }
 }
