@@ -9,5 +9,12 @@ public class Main {
         Dog dog = new Dog("진돗개", "백구");
         dog.sit();
         dog.hand();
+
+        Car car = new Car("Avante", 0);
+        car.accelerate();  // 속도 10
+        car.accelerate();  // 속도 20
+        car.accelerate();  // 속도 30
+        car.brake();       // 속도 20
+        car.printInfo();   // 모델: Avante, 속도: 20km/h
     }
 }
